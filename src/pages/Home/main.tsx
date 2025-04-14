@@ -1,28 +1,27 @@
 import Footer from "@/components/Footer/footer"
 import Header from "@/components/Header/header"
 import Conteudo from "@/components/Conteudo/conteudo"
-import Menu from "@/components/Menu/menu"
-import MenuItem from "@/components/Menu/menuItem"
-import "../../app/globals.css"
+import AreaLateral from "@/components/Menu/areaLateral"
 
 export default function Main() {
     return (
         <>
-            <main className={`
-                flex flex-col
-                h-screen p-4 gap-5
-            `}>   
-                <Header Hello="Olá do header"/>
-                <div className="flex flex-1 bg-zinc-800 rounded-xl overflow-hidden gap-5">
-                    <Menu>
-                        <MenuItem texto="Pagina 1" url="/Home/main"/>
-                    </Menu>
-                    <Conteudo Hello="Olá do conteúdo"/>
+            <main className="flex flex-row h-screen bg-gradient-to-br from-slate-800 to-zinc-800">
+                <div className="flex flex-col bg-black">
+                    <AreaLateral/>
                 </div>
-                <Footer 
-                    saudacao="Feito com amor por "
-                    linkedin="Linkedin"
-                />
+                <div className="flex flex-col flex-1 overflow-hidden">
+                    <Header>
+                        Olá do Header
+                    </Header>
+                    <Conteudo>
+                        <h1>Olá do conteúdo</h1>
+                    </Conteudo>
+                    <Footer 
+                        saudacao="Feito com amor por "
+                        linkedin="Linkedin"
+                    />
+                </div>
             </main>
         </>
     )

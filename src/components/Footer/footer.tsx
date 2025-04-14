@@ -3,9 +3,9 @@ export default function Footer(props: any) {
     return(
         <>
             <footer className={`
-                bg-zinc-700
-                flex justify-around
-                p-6 rounded-xl
+                bg-zinc-800 items-center text-zinc-400
+                flex justify-around 
+                px-6 py-3 border-t-2 border-zinc-500
             `}>
                 <h1>{props.saudacao}<a target="_blank" className={estiloLink} href="https://github.com/americanlucas">americanlucas</a></h1>
                 <a target="_blank" className={estiloLink} href="https://www.linkedin.com/in/americanlucas/">{props.linkedin}</a>
